@@ -1,38 +1,32 @@
-// laba3.cpp: определяет точку входа для консольного приложения.
-//
-
-#include "stdafx.h"
 #include<iostream>
 using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int n;
-	//Заполняем матрицу
-	cout << "Введите количество элементов массива";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°";
 	cin >> n;
-	//Создаем динамический массив
+	
 	int *arr;
 	arr = new int[n];
-	//Заполняем массив
+	
 	for (int i = 0; i<n; i++)
 	{
-		cout << "Введите [" << i + 1 << "]-й элемент массива ";
+		cout << "Р’РІРµРґРёС‚Рµ [" << i + 1 << "]-Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° ";
 		cin >> arr[i];
 	}
 	system("cls");
-	//Выводим маccbd
+	
 	for (int i = 0; i<n; i++)
 	{
 		cout << arr[i] << " ";
 	}
 	cout << endl;
 
-	//Считаем сумму
 	int s = 0;
 	for (int i = 0; i<n; i++)
 		s += arr[i];
-	cout << "Сумма равна " << s;
+	cout << "РЎСѓРјРјР° СЂР°РІРЅР° " << s;
 	cout << "\n\n";
 	delete[]arr;
 	system("pause");
