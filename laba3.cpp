@@ -2,33 +2,25 @@
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int n;
-	cout << "Введите количество элементов массива";
+	int n, i, s = 0;
+	cout << "Enter the number of array elements";
 	cin >> n;
 	
-	int *arr;
-	arr = new int[n];
+	int *array;
+	array = new int[n];
 	
-	for (int i = 0; i<n; i++)
+	for (i = 0; i<n; i++)
 	{
-		cout << "Введите [" << i + 1 << "]-й элемент массива ";
-		cin >> arr[i];
+		cout << "Enter [ "<< i + 1 <<"] th element of the array";
+		cin >> array[i];
 	}
-	system("cls");
-	
-	for (int i = 0; i<n; i++)
-	{
-		cout << arr[i] << " ";
-	}
-	cout << endl;
 
 	int s = 0;
-	for (int i = 0; i<n; i++)
-		s += arr[i];
-	cout << "Сумма равна " << s;
+	for (i = 0; i<n; i++)
+		s += array[i];
+	cout << "The sum of elements is equal to" << s;
 	cout << "\n\n";
-	delete[]arr;
+	delete[]array;
 	system("pause");
 	return 0;
 }
